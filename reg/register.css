@@ -1,0 +1,52 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(236, 252, 237) ;
+}
+fieldset {
+    background: rgb(195, 193, 193);
+    padding: 40px;
+    border: solid  rgba(143, 231, 99, 0.336) 5px;
+    border-radius:7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7px;
+    margin: 13px;
+    border: solid rgba(0, 0, 0, 0.336) 1px;
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.596);
+}
+input.sub {
+    height: 30px;
+    border: rgba(0, 0, 0, 0.336);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font: optional;
+}
+input.sub:hover {
+    cursor: pointer;
+}
+p {
+    margin: 5px 15px;
+    
+}
+.massage {
+    border-radius: 100px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    color: rgb(152, 41, 41);
+}
+a{
+    color: rgb(25, 45, 18);
+}
