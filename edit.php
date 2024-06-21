@@ -1,31 +1,25 @@
 <?php
-// Подключение к БД
+
 require 'reg\connect.php';
 
-// Получение ID статьи из GET-запроса
 $id = $_GET['id'];
 
-// Проверка отправки формы
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'];
     $content = $_POST['content'];
 
-    // Обновление статьи в БД
     $sql = "UPDATE post SET title = :title, content = :content WHERE id = :id";
     $statement = $pdo->prepare($sql);
     $statement->execute(['title' => $title, 'content' => $content, 'id' => $id]);
 
-    // Перенаправление на главную страницу
     header('Location: index.php');
     exit;
 }
 
-// Запрос на получение статьи по ID
 $sql = "SELECT * FROM post WHERE id = :id";
 $statement = $pdo->prepare($sql);
 $statement->execute(['id' => $id]);
 
-// Получение статьи
 $post = $statement->fetch(PDO::FETCH_ASSOC);
 
 if (!$post) {
